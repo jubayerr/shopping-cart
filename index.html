@@ -26,11 +26,13 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i id="decreaseItem" class="fas fa-minus"></i></button>
-                           <input id="inputText" type="text" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i id="increaseItem" class="fas fa-plus"></i></button>
+                           <button onclick="handlePhoneValue(false)" class="btn btn-default"><i
+                                 class="fas fa-minus"></i></button>
+                           <input id="input-phone" type="text" class="form-control text-center" value="1">
+                           <button onclick="handlePhoneValue(true)" class="btn btn-default"><i
+                                 class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$<span id="totalPhonePrice">1219</span></h5>
+                        <h5>$<span id="total-phone">1219</span></h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
