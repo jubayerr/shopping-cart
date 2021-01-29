@@ -17,4 +17,18 @@ function handleProductValue(product, isIncrease) {
         productTotal = productNewCount * 59;
     }
     document.getElementById(product + '-total').innerText = productTotal;
+    calculateTotal()
+}
+
+function calculateTotal() {
+    phonePrice = document.getElementById('phone-input');
+    phoneNewPrice = parseInt(phonePrice.value)
+    casePrice = document.getElementById('case-input');
+    caseNewPrice = parseInt(casePrice.value)
+    totalPrice = phoneNewPrice * 1219 + caseNewPrice * 59
+    document.getElementById('total-price').innerText = totalPrice;
+    const tax = Math.round(totalPrice * 0.1)
+    document.getElementById('tax').innerText = tax;
+    document.getElementById('total').innerText = totalPrice + tax;
+    return totalPrice;
 }
