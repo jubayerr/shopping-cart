@@ -21,14 +21,19 @@ function handleProductValue(product, isIncrease) {
 }
 
 function calculateTotal() {
-    phonePrice = document.getElementById('phone-input');
-    phoneNewPrice = parseInt(phonePrice.value)
-    casePrice = document.getElementById('case-input');
-    caseNewPrice = parseInt(casePrice.value)
+    const phoneNewPrice = getInputValue('phone');
+    const caseNewPrice = getInputValue('case');
+
     totalPrice = phoneNewPrice * 1219 + caseNewPrice * 59
     document.getElementById('total-price').innerText = totalPrice;
     const tax = Math.round(totalPrice * 0.1)
     document.getElementById('tax').innerText = tax;
     document.getElementById('total').innerText = totalPrice + tax;
     return totalPrice;
+}
+
+function getInputValue(product) {
+    productPrice = document.getElementById(product + '-input');
+    productNewPrice = parseInt(productPrice.value);
+    return productNewPrice;
 }
